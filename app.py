@@ -11,6 +11,13 @@ def load_data():
 
 df = load_data()
 
+
+col1, col2 = st.columns([4, 1])
+
+with col2:
+    st.image("logo.png", width=200)
+
+
 # 🎉 Titre
 st.title("Ton Programme des 45 ")
 
@@ -36,4 +43,4 @@ if user_input:
                 st.markdown(f"**{col} :** {row[col]}")
 
     else:
-        st.error("Aucun résultat trouvé 😕 Vérifie l'orthographe.")
+        st.error("Aucun résultat trouvé 😕 Vérifie le trigramme.")
