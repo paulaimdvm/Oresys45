@@ -11,12 +11,12 @@ supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 st.set_page_config(page_title="Shotgun Activités", layout="centered")
 
-st.title("🎯 Inscription aux activités")
+st.title(" Inscription aux activités")
 
 # ==============================
 # 🔍 AFFICHAGE DES PLACES
 # ==============================
-st.subheader("📊 Places restantes")
+st.subheader("Places restantes")
 
 data = supabase.table("activites").select("*").execute()
 
@@ -45,7 +45,7 @@ else:
     st.error("⚠️ Aucune activité disponible")
     st.stop()
 
-if st.button("🚀 Valider mon inscription"):
+if st.button(" Valider mon inscription"):
 
     if trigramme == "":
         st.warning("Veuillez entrer un trigramme")
@@ -71,7 +71,7 @@ if st.button("🚀 Valider mon inscription"):
                 st.error(f"⚠️ Réponse inconnue : {resultat}")
 
         except Exception as e:
-            st.error(f"🔥 Erreur : {e}")
+            st.error(f" Erreur : {e}")
 
 st.divider()
 
