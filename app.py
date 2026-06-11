@@ -39,7 +39,8 @@ trigramme = st.text_input("Ton trigramme (ex: ABC)").upper()
 if activites_dict:
     activite = st.selectbox(
         "Choix activité",
-        list(activites_dict.keys())
+        list(activites_dict.keys()),index=None,
+        placeholder="Choisis une activité"
     )
 else:
     st.error("⚠️ Aucune activité disponible")
