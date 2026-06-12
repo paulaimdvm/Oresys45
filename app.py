@@ -69,9 +69,11 @@ if st.button(" Valider mon inscription"):
             elif resultat == "ACTIVITE INTROUVABLE":
                 st.error("⚠️ Activité non reconnue")
             elif resultat == "TRIGRAMME_INCONNU":
-                st.error("❌ Trigramme inconnu. Vérifie ton code.")
+                st.error("❌ Trigramme inconnu")
+
             elif resultat == "DEJA_INSCRIT":
-                st.warning("⚠️ Tu es déjà inscrit à une activité. Impossible de modifier.")
+                st.warning("⚠️ Tu es déjà inscrit, modification impossible")
+
 
             else:
                 st.error(f"⚠️ Réponse inconnue : {resultat}")
