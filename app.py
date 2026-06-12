@@ -50,6 +50,10 @@ if st.button(" Valider mon inscription"):
 
     if trigramme == "":
         st.warning("Veuillez entrer un trigramme")
+
+    elif activite is None:
+        st.warning("Veuillez choisir une activité")
+
     else:
         try:
             res = supabase.rpc(
