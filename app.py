@@ -84,7 +84,8 @@ if st.button(" Valider mon inscription"):
 
         except Exception as e:
             st.error(f" Erreur : {e}")
-
+st.write("DEBUG trigramme:", trigramme)
+st.write("DEBUG activite:", activite)
 st.divider()
 
 
