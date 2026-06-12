@@ -32,7 +32,7 @@ st.divider()
 # 📝 FORMULAIRE INSCRIPTION
 # ==============================
 st.subheader("📝 S'inscrire")
-
+st.info("⚠️ Une fois inscrit, tu ne pourras plus modifier ton choix d'activité.")
 trigramme = st.text_input("Ton trigramme (ex: ABC)").upper()
 
 
@@ -68,6 +68,10 @@ if st.button(" Valider mon inscription"):
                 st.error("❌ Activité complète")
             elif resultat == "ACTIVITE INTROUVABLE":
                 st.error("⚠️ Activité non reconnue")
+            
+            elif resultat == "DEJA_INSCRIT":
+                st.warning("⚠️ Tu es déjà inscrit à une activité. Impossible de modifier.")
+
             else:
                 st.error(f"⚠️ Réponse inconnue : {resultat}")
 
